@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website - ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#">ShopEase</a></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for products...">
+                <button onclick="searchProduct()">Search</button>
+            </div>
+            <div class="cart-icon">
+                <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homepage -->
+    <section id="home" class="homepage">
+        <div class="hero">
+            <h2>Welcome to ShopEase</h2>
+            <p>Your one-stop shop for everything!</p>
+            <button onclick="scrollToSection('categories')">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="categories">
+        <h2>Explore Categories</h2>
+        <div class="category-list">
+            <div class="category-item">
+                <img src="assets/category1.png" alt="Electronics">
+                <p>Electronics</p>
+            </div>
+            <div class="category-item">
+                <img src="assets/category2.jpg" alt="Fashion">
+                <p>Fashion</p>
+            </div>
+            <div class="category-item">
+                <img src="assets/category3.png" alt="Home Appliances">
+                <p>Home Appliances</p>
+            </div>
+            <div class="category-item">
+                <img src="assets/category4.webp" alt="Beauty Products">
+                <p>Beauty Products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="assets/product1.png" alt="Smartphone">
+                <h3>Smartphone</h3>
+                <p>$499</p>
+                <button onclick="addToCart('Smartphone', 499)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="assets/product2.png" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>$99</p>
+                <button onclick="addToCart('Wireless Headphones', 99)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="assets/product3.png" alt="Blender">
+                <h3>Blender</h3>
+                <p>$79</p>
+                <button onclick="addToCart('Blender', 79)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="assets/product4.png" alt="Men's Jacket">
+                <h3>Men's Jacket</h3>
+                <p>$149</p>
+                <button onclick="addToCart('Men\'s Jacket', 149)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+        </table>
+        <p id="total-price">Total: $0</p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>ShopEase</h3>
+                <p>1234 Market Street, City, Country</p>
+                <p>Email: info@shopease.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
